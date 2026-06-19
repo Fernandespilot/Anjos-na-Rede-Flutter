@@ -7,6 +7,7 @@ class ActionCard extends StatelessWidget {
   final String subtitle;
   final Color color;
   final IconData icon;
+  final String? imagePath;
   final String buttonLabel;
   final VoidCallback onTap;
   final int delay;
@@ -17,6 +18,7 @@ class ActionCard extends StatelessWidget {
     required this.subtitle,
     required this.color,
     required this.icon,
+    this.imagePath,
     required this.buttonLabel,
     required this.onTap,
     this.delay = 0,
@@ -46,7 +48,10 @@ class ActionCard extends StatelessWidget {
               width: 60,
               height: 60,
               decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(16)),
-              child: Icon(icon, color: AppColors.onSurface, size: 28),
+              clipBehavior: Clip.antiAlias,
+              child: imagePath != null
+                  ? Image.asset(imagePath!, fit: BoxFit.cover)
+                  : Icon(icon, color: AppColors.onSurface, size: 28),
             ),
             const SizedBox(width: 16),
             Expanded(
