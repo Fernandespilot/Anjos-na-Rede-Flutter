@@ -31,7 +31,7 @@ class _RelatoCasaScreenState extends State<RelatoCasaScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppColors.safetyGreen.withOpacity(0.1),
+                color: AppColors.safetyGreen.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text('Você está seguro(a) agora? Se não, ligue 190.',

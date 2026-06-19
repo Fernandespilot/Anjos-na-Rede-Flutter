@@ -98,7 +98,7 @@ class _AgentChatWidgetState extends State<AgentChatWidget> {
                 color: AppColors.background,
                 borderRadius: BorderRadius.circular(24),
                 boxShadow: [
-                  BoxShadow(color: Colors.black.withOpacity(0.15), blurRadius: 24, offset: const Offset(0, 8)),
+                  BoxShadow(color: Colors.black.withValues(alpha: 0.15), blurRadius: 24, offset: const Offset(0, 8)),
                 ],
               ),
               child: Column(

@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 120,
               height: 120,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.shield_outlined, size: 64, color: Colors.white),
@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               'Proteção com cuidado e sigilo',
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Colors.white.withOpacity(0.85),
+                    color: Colors.white.withValues(alpha: 0.85),
                   ),
             ).animate().fadeIn(delay: 600.ms),
             const SizedBox(height: 48),
